@@ -61,18 +61,18 @@ class _HomePageState extends State<HomePage> {
                       width: 80.0,
                       height: 80.0,
                       child: PlatformAwareAssetImage(
-                        assetPath: 'assets/images/profile.png',
+                        assetPath: 'assets/images/profile.jpg',
                       ),
                     )
                   ),
                   SizedBox(height: 8.0),
                   Text(
-                    'Promlert Lovichit',
+                    'Natthaya Thomyapan',
                     style: TextStyle(fontSize: 20.0, color: Colors.white),
                   ),
                   SizedBox(height: 4.0),
                   Text(
-                    'promlert@gmail.com',
+                    'natthaya@gmail.com',
                     style: TextStyle(
                         fontSize: 14.0, color: Colors.white.withOpacity(0.6)),
                   ),
@@ -96,7 +96,9 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   setState(() {
                     _selectedDrawerItemIndex =
-                        _pageDataList.indexWhere((element) => item == element);
+                        _pageDataList.indexWhere((element) {
+                          return item == element;
+                        });
                   });
                   Navigator.of(context).pop();
                 },
